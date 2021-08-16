@@ -28,7 +28,7 @@ const Projects = () => {
         <div className="project-wrapper">
           <Title title="Projects" />
           {projects.map((project) => {
-            const { title, info, info2, url, repo, img, id } = project;
+            const { title, info, url, repo, img, id } = project;
 
             return (
               <Row key={id}>
@@ -43,26 +43,35 @@ const Projects = () => {
                     <div className="project-wrapper__text">
                       <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
                       <div>
-                        <p>
-                          {info ||
-                            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
-                        </p>
-                        <p className="mb-4">{info2 || ''}</p>
+                        {info.map((infoEl) => {
+                          return (
+                            <div key={infoEl.id}>
+                              {infoEl.heading && (
+                                <p>
+                                  <strong>{infoEl.heading}</strong>
+                                </p>
+                              )}
+                              {infoEl.text && <p className="mb-4">{infoEl.text}</p>}
+                            </div>
+                          );
+                        })}
                       </div>
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cta-btn cta-btn--hero"
-                        href={url || '#!'}
-                      >
-                        See Live
-                      </a>
+                      {url && (
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="cta-btn cta-btn--hero"
+                          href={url || '#!'}
+                        >
+                          See Live
+                        </a>
+                      )}
 
                       {repo && (
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="cta-btn text-color-main"
+                          className="cta-btn cta-btn--hero"
                           href={repo}
                         >
                           Source Code
