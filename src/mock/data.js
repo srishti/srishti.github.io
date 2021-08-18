@@ -24,7 +24,7 @@ export const aboutData = {
     "I'm a strong engineering professional with a masters degree in Computer Applications from National Institute of Technology Tiruchirappalli.",
   paragraphThree:
     'My core skills are Frontend Development, React.js, Redux, Next.js, TypeScript, JavaScript, SASS, CSS, HTML.',
-  resume: 'https://drive.google.com/file/d/1s3WBhe-e998f0m-DiHmRT4YLIWUpfDtj/view', // if no resume, the button will not show up
+  resume: 'https://drive.google.com/file/d/1E_Tw0hb1ULx2_hwUzdumGCgaFGuqi16Y/view', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
@@ -51,7 +51,7 @@ export const projectsData = [
       },
     ],
     url: '',
-    repo: 'https://github.com/srishti/course-catalog', // if no repo, the button will not show up
+    repo: 'https://github.com/upgrad-edu/course-catalog-frontend', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
